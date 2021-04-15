@@ -39,7 +39,7 @@ class ExchangeRateListViewModel(private val getCurrency :GetCurrency,
 
         viewModelScope.launch {
             _progress.value = true
-            when(val result = getCurrency.run(GetCurrency.Params(11, 2021))){
+            when(val result = getCurrency.run(GetCurrency.Params(""))){
                 is ResultType.Success -> {
                     _listCurrency.value = Event(result.data)
                 }

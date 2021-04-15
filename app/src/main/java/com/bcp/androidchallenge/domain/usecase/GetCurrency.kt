@@ -7,7 +7,7 @@ import com.bcp.androidchallenge.domain.util.ResultType
 class GetCurrency (private val currencyRepository: ICurrencyRepository): UseCase<List<CurrencyModel>, GetCurrency.Params>() {
 
     override suspend fun run(params: Params): ResultType<List<CurrencyModel>>{
-        val result = currencyRepository.getCurrencies(params.month, params.year)
+        val result = currencyRepository.getCurrencies()
         when(result){
             is ResultType.Success -> {
 
@@ -20,5 +20,5 @@ class GetCurrency (private val currencyRepository: ICurrencyRepository): UseCase
         return result
     }
 
-    data class Params(val month: Int, val year: Int)
+    data class Params(val sign :String)
 }

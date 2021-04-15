@@ -27,7 +27,7 @@ class CurrencyDataRepository(private val currencyDao: CurrencyDao) : ICurrencyRe
         currencyDao.insert(currency)
     }
 
-    override suspend fun getCurrencies(month: Int, year: Int) = safeApiCall {
+    override suspend fun getCurrencies() = safeApiCall {
 
         val response = api.getCurrencies()
 

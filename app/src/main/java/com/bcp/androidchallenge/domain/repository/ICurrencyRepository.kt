@@ -5,7 +5,7 @@ import com.bcp.androidchallenge.domain.model.CurrencyModel
 import com.bcp.androidchallenge.domain.util.ResultType
 
 interface ICurrencyRepository {
-    suspend fun getCurrencies(month: Int, year: Int): ResultType<List<CurrencyModel>>
+    suspend fun getCurrencies(): ResultType<List<CurrencyModel>>
 
     suspend fun getCurrencyBySignBySourceOrDestination(exchangeRate :String): ResultType<Currency>
 
