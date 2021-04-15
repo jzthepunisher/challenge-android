@@ -70,7 +70,7 @@ class SplashFragment : BaseFragment() {
 
     fun startTimeCounter() {
 
-        object : CountDownTimer(1000, 1000) {
+        object : CountDownTimer(5000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 counter++
             }

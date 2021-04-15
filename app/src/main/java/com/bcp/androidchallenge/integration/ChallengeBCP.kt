@@ -21,7 +21,7 @@ object ChallengeBCP {
 
         containerId = contentFragment
 
-        Navigation.navigateTo(context, ExchangeRateOperationFragment(), addBackStack = false, animate = false)
+        Navigation.navigateTo(context, SplashFragment(), addBackStack = false, animate = false)
     }
 
     interface FragmentTransactionHelper{
