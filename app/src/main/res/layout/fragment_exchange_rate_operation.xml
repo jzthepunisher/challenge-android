@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.bcp.androidchallenge.presentation.ui.exchangerate.operation.ExchangeRateOperationViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutYouSend"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Tú enviarás"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextYouSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="100" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutYouGet"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:hint="Tú recibes"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutYouSend"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextYouGet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="0" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/logo_bcp_vector"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:srcCompat="@drawable/logo_bcp_vector" />
+
+        <TextView
+            android:id="@+id/textViewYouSendCurrencyDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingStart="8dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:gravity="left|center_vertical"
+            android:text=""
+            app:layout_constraintTop_toTopOf="@+id/textInputLayoutYouSend"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutYouSend"
+            app:layout_constraintStart_toEndOf="@+id/textInputLayoutYouSend"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewYouGetCurrencyDescription"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingStart="8dp"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:gravity="left|center_vertical"
+            android:text=""
+            app:layout_constraintTop_toTopOf="@+id/textInputLayoutYouGet"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutYouGet"
+            app:layout_constraintStart_toEndOf="@+id/textInputLayoutYouGet"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewExchange"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:background="@color/white"
+            android:src="@drawable/round_autorenew_20"
+            app:layout_constraintTop_toTopOf="@+id/textInputLayoutYouSend"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutYouGet"
+
+            app:layout_constraintEnd_toEndOf="@+id/textViewYouSendCurrencyDescription"
+            tools:srcCompat="@drawable/round_autorenew_20" />
+
+
+        <TextView
+            android:id="@+id/textViewBuyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="100dp"
+            android:paddingEnd="8dp"
+            android:gravity="left|center_vertical"
+            android:text="Compra : "
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutYouGet"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/textViewBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingEnd="8dp"
+            android:gravity="left|center_vertical"
+            android:text=""
+            app:layout_constraintTop_toTopOf="@+id/textViewBuyLabel"
+            app:layout_constraintStart_toEndOf="@+id/textViewBuyLabel"/>
+
+        <TextView
+            android:id="@+id/textViewSeparator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="left|center_vertical"
+            android:text="|"
+            app:layout_constraintTop_toTopOf="@+id/textViewBuyLabel"
+            app:layout_constraintStart_toEndOf="@+id/textViewBuy"/>
+
+        <TextView
+            android:id="@+id/textViewBuySale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingEnd="8dp"
+            android:text="Venta : "
+            app:layout_constraintTop_toTopOf="@+id/textViewBuyLabel"
+            app:layout_constraintStart_toEndOf="@+id/textViewSeparator"/>
+
+        <TextView
+            android:id="@+id/textViewSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingEnd="8dp"
+            android:gravity="left|center_vertical"
+            android:text=""
+            app:layout_constraintTop_toTopOf="@+id/textViewBuyLabel"
+            app:layout_constraintStart_toEndOf="@+id/textViewBuySale"/>
+
+        <Button
+            android:id="@+id/buttonStartYourOperation"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:text="Empieza tu operación"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        <!--
+         <EditText
+            android:id="@+id/editTextYouSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="100"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+            app:layout_constraintStart_toStartOf="parent"/>
+        -->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

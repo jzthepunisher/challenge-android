@@ -1,0 +1,48 @@
+{
+  "data": {
+    "currencies": [
+      {
+        "description": "European Union",
+        "euro_equivalence": 1.0000,
+        "sign": "EUR",
+        "sign_description": "Euros"
+      },
+      {
+        "description": "United States",
+        "euro_equivalence": 0.8400,
+        "sign": "USD",
+        "sign_description": "Dólares"
+      },
+      {
+        "description": "Japan",
+        "euro_equivalence": 118.0200,
+        "sign": "JPY",
+        "sign_description": "Yenes"
+      },
+      {
+        "description": "United Kingdom",
+        "euro_equivalence": 0.8866,
+        "sign": "GBP",
+        "sign_description": "Libras"
+      },
+      {
+        "description": "Switzerland",
+        "euro_equivalence": 1.0836,
+        "sign": "CHF",
+        "sign_description": "Francos"
+      },
+      {
+        "description": "Canada",
+        "euro_equivalence": 1.4565,
+        "sign": "CAD",
+        "sign_description": "Dólares"
+      },
+      {
+        "description": "Perú",
+        "euro_equivalence": 0.2300,
+        "sign": "SOL",
+        "sign_description": "Soles"
+      }
+    ]
+  }
+}
